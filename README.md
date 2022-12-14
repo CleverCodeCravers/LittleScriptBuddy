@@ -17,7 +17,7 @@ When you write a special comment in your code it will add the result to the file
 
 It will parse that line and convert it into the following command: 
 ```
-collection.ps -of IWhatever
+collection.ps1 -of IWhatever
 ```
 
 The powershell script will then output some things to stdout which will be collected:
