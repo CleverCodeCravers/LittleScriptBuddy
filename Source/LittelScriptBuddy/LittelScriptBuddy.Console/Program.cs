@@ -1,28 +1,19 @@
-﻿using CommandLineArguments;
+﻿using LittelScriptBuddy.Domain;
+using LittelScriptBuddy.Domain.FilesWatcher;
 
-var parser = new Parser(
-    new ICommandLineOption[] {
-        new StringCommandLineOption("--targetDirectory"),
-        new StringCommandLineOption("--scriptDirectory")
-    });
+var parser = new ConsoleCommandLineParser();
 
-if (!parser.TryParse(args, true))
+var commandLineParametersResult = parser.Parse(args);
+
+if (!commandLineParametersResult.IsSuccess)
 {
     Console.WriteLine("Unfortunately there have been problems with the command line arguments.");
-    Console.WriteLine("");
     return;
 }
 
-if (string.IsNullOrWhiteSpace(parser.TryGetOptionWithValue<string>("--targetDirectory")) || string.IsNullOrEmpty(parser.TryGetOptionWithValue<string>("--scriptDirectory"))) 
-{
-    Console.WriteLine("Unfortunately there have been problems with the command line arguments.");
-    Console.WriteLine("");
-    return;
-}
+var parameters = commandLineParametersResult.Value;
 
+var watcher = new FilesWatcher(parameters.TargetDirectory, parameters.ScriptsDirectory);
 
-{
-
-}
-;
-Console.WriteLine(parser.TryGetOptionWithValue<string>("--targetDirectory"));
+Console.WriteLine("Press 'q' to quit the program.");
+while (Console.Read() != 'q') ;
