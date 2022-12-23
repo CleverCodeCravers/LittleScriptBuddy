@@ -9,8 +9,8 @@
             _watcher.Path = targetDirectory;
             _watcher.Filter = "*.*";
             _watcher.IncludeSubdirectories= true;
-            _watcher.Changed += new FilesWatcherEvents(scriptDirectory).OnChanged;
             _watcher.EnableRaisingEvents = true;
+            _watcher.Changed += new FilesWatcherEvents(scriptDirectory).OnChanged;
         }
 
     }

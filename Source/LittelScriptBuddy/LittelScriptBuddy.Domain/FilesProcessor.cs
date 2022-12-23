@@ -23,16 +23,19 @@
 
         public static string GetFirstLine(string filepath)
         {
-            using (StreamReader reader = new StreamReader(filepath))
+            try
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                using (FileStream stream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.None))
                 {
-                    if (line.Contains("// lsb:"))
+                    using (StreamReader reader = new StreamReader(stream))
                     {
-                        return line;
+                        return reader.ReadToEnd();
                     }
                 }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e.Message);
             }
             return "";
         }
