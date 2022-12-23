@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LittelScriptBuddy.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "--targetDirectory \"C:\\Users\\Kane\\Documents\\Github\\LocalNetAppChat\" --scriptsDirectory \"C:\\Users\\Kane\\Desktop\\Github\\Scripts\""
+    }
+  }
+}

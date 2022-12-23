@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CommandLineArguments\CommandLineArguments.csproj" />
-    <ProjectReference Include="..\LittelScriptBuddy.Domain\LittelScriptBuddy.Domain.csproj" />
+    <ProjectReference Include="..\LittleScriptBuddy.Domain\LittleScriptBuddy.Domain.csproj" />
   </ItemGroup>
 
 </Project>

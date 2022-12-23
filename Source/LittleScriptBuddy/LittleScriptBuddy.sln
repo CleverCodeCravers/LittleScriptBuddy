@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittelScriptBuddy.Persistence", "LittelScriptBuddy.Persistence\LittelScriptBuddy.Persistence.csproj", "{0B76CB83-86B0-4EDD-B10A-C825CC211A98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittleScriptBuddy.Domain", "LittleScriptBuddy.Domain\LittleScriptBuddy.Domain.csproj", "{0AB0B8A8-D23E-4ECC-A3C5-3AB665B8A957}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittelScriptBuddy.Domain", "LittelScriptBuddy.Domain\LittelScriptBuddy.Domain.csproj", "{0AB0B8A8-D23E-4ECC-A3C5-3AB665B8A957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittleScriptBuddy.Domain.Tests", "LittleScriptBuddy.Domain.Tests\LittleScriptBuddy.Domain.Tests.csproj", "{1D5E7A09-E730-4B61-A006-C4029C6F9E86}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittelScriptBuddy.Domain.Tests", "LittelScriptBuddy.Domain.Tests\LittelScriptBuddy.Domain.Tests.csproj", "{1D5E7A09-E730-4B61-A006-C4029C6F9E86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LittleScriptBuddy.Console", "LittleScriptBuddy.Console\LittleScriptBuddy.Console.csproj", "{D53F4F06-A6F6-48E9-B485-135C9DD5323F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittelScriptBuddy.Console", "LittelScriptBuddy.Console\LittelScriptBuddy.Console.csproj", "{D53F4F06-A6F6-48E9-B485-135C9DD5323F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineArguments", "CommandLineArguments\CommandLineArguments.csproj", "{7B52C949-CAD6-4E65-9515-E5E0B149DA3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineArguments", "CommandLineArguments\CommandLineArguments.csproj", "{7B52C949-CAD6-4E65-9515-E5E0B149DA3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0B76CB83-86B0-4EDD-B10A-C825CC211A98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B76CB83-86B0-4EDD-B10A-C825CC211A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B76CB83-86B0-4EDD-B10A-C825CC211A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B76CB83-86B0-4EDD-B10A-C825CC211A98}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0AB0B8A8-D23E-4ECC-A3C5-3AB665B8A957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0AB0B8A8-D23E-4ECC-A3C5-3AB665B8A957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AB0B8A8-D23E-4ECC-A3C5-3AB665B8A957}.Release|Any CPU.ActiveCfg = Release|Any CPU
