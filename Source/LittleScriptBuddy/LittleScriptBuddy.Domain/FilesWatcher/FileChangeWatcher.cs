@@ -19,7 +19,6 @@ namespace LittelScriptBuddy.Domain.FilesWatcher
             this.targetDirectory = targetDirectory;
             this.fileEnding = fileEnding;
             this.onFileChanged = onFileChanged;
-
         }
 
         public void Run() 

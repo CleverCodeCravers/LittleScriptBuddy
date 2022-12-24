@@ -37,7 +37,7 @@ var watcher = new FileChangeWatcher(
 
         var zeitstempel = DateTime.Now;
         var targetFilename = Path.GetFileName(file);
-        Console.WriteLine($" - [{zeitstempel:yyyy-MM-dd}] exec {command} >> {targetFilename}");
+        Console.WriteLine($" - [{zeitstempel:yyyy-MM-dd HH:mm:ss}] exec {command} >> {targetFilename}");
     });
 watcher.Run();
 
