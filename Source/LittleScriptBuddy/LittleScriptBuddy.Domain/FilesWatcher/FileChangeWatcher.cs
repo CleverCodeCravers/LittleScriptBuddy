@@ -41,6 +41,9 @@ namespace LittelScriptBuddy.Domain.FilesWatcher
 
             if (filenameWithFullPath.Contains("/.vs/"))
                 return false;
+            
+            if (filenameWithFullPath.Contains("/.idea/"))
+                return false;
 
             return filename.EndsWith(fileEnding);
         }
