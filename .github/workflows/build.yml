@@ -57,7 +57,7 @@ jobs:
           find . -name '*.pdb' -delete
 
       - name: Delete PDB files (Windows)
-        if: runner.os == 'Linux'
+        if: runner.os == 'Windows'
         working-directory: Source/${{ env.SOLUTION_DIR }}
         run: |
           del /Q /F *.pdb
