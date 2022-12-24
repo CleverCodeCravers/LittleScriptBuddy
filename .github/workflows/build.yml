@@ -52,13 +52,13 @@ jobs:
 
       - name: Delete PDB files (Linux)
         if: runner.os == 'Linux'
-        working-directory: ${{matrix.OUTPUTDIR}}
+        working-directory: ./Source/${{ env.SOLUTION_DIR }}/${{matrix.OUTPUTDIR}}/
         run: |
           find . -name '*.pdb' -delete
 
       - name: Delete PDB files (Windows)
         if: runner.os == 'Windows'
-        working-directory: ${{matrix.OUTPUTDIR}}
+        working-directory: ./Source/${{ env.SOLUTION_DIR }}/${{matrix.OUTPUTDIR}}/
         run: Remove-Item -Path '*.pdb' -Force -Recurse
         shell: pwsh
 
