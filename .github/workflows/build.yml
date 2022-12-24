@@ -50,6 +50,15 @@ jobs:
         run: dotnet publish ${{ env.PROJECT }} -c Release -o ${{matrix.OUTPUTDIR}} -p:PublishReadyToRun=true --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true -r ${{matrix.RUNTIMEID}}
         working-directory: Source/${{ env.SOLUTION_DIR }}
 
+      - name: Delete PDB files
+        working-directory: Source/${{ env.SOLUTION_DIR }}
+        run: |
+          if [[ "${{ runners.os }}" == 'Linux' ]]; then
+            find . -name '*.pdb' -delete
+          elif [[ "${{ runners.os }}" == 'Windows' ]]; then
+            del /Q /F *.pdb
+          fi
+
       - uses: vimtor/action-zip@v1
         with:
           files: ./Source/${{ env.SOLUTION_DIR }}/${{matrix.OUTPUTDIR}}/
