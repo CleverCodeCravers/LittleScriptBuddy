@@ -60,7 +60,7 @@ jobs:
         if: runner.os == 'Windows'
         working-directory: Source/${{ env.SOLUTION_DIR }}
         run: |
-          del /Q /F *.pdb
+          del /Q *.pdb
 
       - uses: vimtor/action-zip@v1
         with:
