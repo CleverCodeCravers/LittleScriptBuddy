@@ -59,8 +59,8 @@ jobs:
       - name: Delete PDB files (Windows)
         if: runner.os == 'Windows'
         working-directory: Source/${{ env.SOLUTION_DIR }}
-        run: |
-          for /f "delims=" %i in ('dir /b /a-d *.pdb') do del "%i"
+        run: Remove-Item -Path '*.pdb' -Force
+        shell: pwsh
 
       - uses: vimtor/action-zip@v1
         with:
