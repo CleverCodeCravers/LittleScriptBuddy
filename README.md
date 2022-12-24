@@ -2,10 +2,10 @@
 
 [![.github/workflows/build.yml](https://github.com/CleverCodeCravers/LittleScriptBuddy/actions/workflows/build.yml/badge.svg)](https://github.com/CleverCodeCravers/LittleScriptBuddy/actions/workflows/build.yml)
 
-LittleScriptBrother is an application that will watch your file changes cs-files in a specific directory.
+An application that will watch your file changes cs-files, look for a specific comment, translate this comment into a command line, execute it and paste the results into the cs file.
 
 ```
-LittleScriptBrother.exe --targetDirectory C:\Projekte --scriptsDirectory C:\Scripts
+LittleScriptBuddy.exe --targetDirectory C:\Projekte --scriptsDirectory C:\Scripts
 ```
 
 The script directory contains a bunch of powershell-files. 
