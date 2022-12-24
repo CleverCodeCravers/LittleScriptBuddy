@@ -1,5 +1,7 @@
 # LittleScriptBrother
 
+[![.github/workflows/build.yml](https://github.com/CleverCodeCravers/LittleScriptBuddy/actions/workflows/build.yml/badge.svg)](https://github.com/CleverCodeCravers/LittleScriptBuddy/actions/workflows/build.yml)
+
 LittleScriptBrother is an application that will watch your file changes cs-files in a specific directory.
 
 ```
