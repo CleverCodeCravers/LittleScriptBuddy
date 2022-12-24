@@ -12,12 +12,12 @@ Every powershell file is considered a possible command.
 When you write a special comment in your code it will add the result to the file:
 
 ```csharp
-// lsb: collection of IWhatever
+//lsb: collection.ps1 "IWhatever"
 ```
 
 It will parse that line and convert it into the following command: 
 ```
-collection.ps1 -of IWhatever
+collection.ps1 "IWhatever"
 ```
 
 The powershell script will then output some things to stdout which will be collected:
@@ -31,9 +31,8 @@ public class WhateverCollection {
 }
 ```
 
-The text will then end up below the comment:
+The comment will then be replaced by the content the script delivered:
 ```
-// lsb: collection of IWhatever
 public class WhateverCollection {
     private List<IWhatever> data = new List<IWhatever>();
     
@@ -41,25 +40,8 @@ public class WhateverCollection {
     {
     }
 }
-// end ļsb
 ```
 
-You can now change your command as often as you like. The text between the `lsb` command line and `end lsb` will be replaced every time
-the file is saved again.
+This "template plugin" allows for a lot of automation since we are using powershell in the backend which is fully fledged and can tap into the .net framework as a huge library.
 
-When you like your code, simply add an exclamation mark to the end of the lsb command line:
-```
-// lsb: collection of IWhatever!
-public class WhateverCollection {
-    private List<IWhatever> data = new List<IWhatever>();
-    
-    public WhateverCollection()
-    {
-    }
-}
-// end ļsb
-```
-
-This will remove the lsb line itself as well as the `end lsb` line leaving the new code block where it is.
-
-
+Also it works with any editor you like, as long as it allows for auto-reloading changes that have taken place outside of the editor. VSCode and Visual Studio both do.
