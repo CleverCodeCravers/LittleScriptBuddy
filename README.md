@@ -3,7 +3,7 @@
 LittleScriptBrother is an application that will watch your file changes cs-files in a specific directory.
 
 ```
-LittleScriptBrother.exe --targetDirectory C:\Projekte --scriptDirectory C:\Scripts
+LittleScriptBrother.exe --targetDirectory C:\Projekte --scriptsDirectory C:\Scripts
 ```
 
 The script directory contains a bunch of powershell-files. 
