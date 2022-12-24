@@ -52,14 +52,14 @@ jobs:
 
       - name: Delete PDB files (Linux)
         if: runner.os == 'Linux'
-        working-directory: Source/${{ env.SOLUTION_DIR }}
+        working-directory: ${{matrix.OUTPUTDIR}}
         run: |
           find . -name '*.pdb' -delete
 
       - name: Delete PDB files (Windows)
         if: runner.os == 'Windows'
-        working-directory: Source/${{ env.SOLUTION_DIR }}
-        run: Remove-Item -Path '*.pdb' -Force
+        working-directory: ${{matrix.OUTPUTDIR}}
+        run: Remove-Item -Path '*.pdb' -Force -Recurse
         shell: pwsh
 
       - uses: vimtor/action-zip@v1
