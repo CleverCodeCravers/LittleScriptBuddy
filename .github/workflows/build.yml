@@ -2,7 +2,7 @@ on:
   push:
 
 env:
-  DOTNET_VERSION: "7.0.x" # The .NET SDK version to use
+  DOTNET_VERSION: "10.0.x" # The .NET SDK version to use
   SOLUTION_DIR: "LittleScriptBuddy"
   PROJECT: "./LittleScriptBuddy.Console/LittleScriptBuddy.Console.csproj"
   RELEASEPREFIX: "LittleScriptBuddy"
@@ -24,9 +24,9 @@ jobs:
             OUTPUTDIR: lsb-win-x64
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
